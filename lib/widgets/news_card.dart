@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:football_news/screens/newslist_form.dart';
+import 'package:football_news/screens/news_entry_list.dart';
 
 class ItemHomepage {
     final String name;
@@ -37,6 +38,14 @@ class ItemCard extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (context) => const NewsFormPage()),
             );
+          }
+          else if (item.name == "See Football News") {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const NewsEntryListPage()
+                  ),
+              );
           }
         },
         // Container untuk menyimpan Icon dan Text
